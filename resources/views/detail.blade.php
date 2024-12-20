@@ -3,11 +3,10 @@
 @section('title', $item->judul)
 
 @section('meta')
-    <!-- Basic Meta Tags -->
+    
     <meta name="description" content="{{ Str::limit($type == 'berita' ? $item->isi : $item->deskripsi, 150) }}">
     <meta name="author" content="Your Site Name">
     
-    <!-- Open Graph Tags -->
     <meta property="og:title" content="{{ $item->judul }}" />
     <meta property="og:description" content="{{ Str::limit($type == 'berita' ? $item->isi : $item->deskripsi, 150) }}" />
     <meta property="og:image" content="{{ asset($item->gambar) }}" />
@@ -15,7 +14,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Your Site Name" />
     
-    <!-- Twitter Card Tags -->
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $item->judul }}">
     <meta name="twitter:description" content="{{ Str::limit($type == 'berita' ? $item->isi : $item->deskripsi, 150) }}">
